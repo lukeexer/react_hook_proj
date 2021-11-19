@@ -35,3 +35,22 @@ $margin: 24px;
     justify-content: flex-end;
     margin: 0px $margin;
 }
+
+$fontInputSize: 16px;
+$formElementHeight: 50px;
+
+.form {
+    margin: $margin;
+
+    .todoInput {
+        width: 230px;
+        height: $formElementHeight;
+        font-size: $fontInputSize;
+    }
+
+    .submitBtn {
+        width: 72px;
+        height: $formElementHeight;
+        font-size: $fontInputSize;
+    }
+}

@@ -1,10 +1,20 @@
 import React from 'react';
 import styles from './index.module.scss';
 
-const Filter = () => {
+type FilterProps = {
+    filterDoneTodo: boolean;
+    switchFilterDoneTodo: () => void;
+}
+
+const Filter = (props: FilterProps) => {
     return (
         <div className={styles.filter}>
-            <input type="checkbox" /> Hide all finished items.
+            <input
+                type="checkbox"
+                checked={props.filterDoneTodo}
+                onChange={props.switchFilterDoneTodo}
+            />
+            Hide all finished items.
         </div>
     )
 };
