@@ -23,10 +23,10 @@ const TodoList = () => {
                     filterDoneTodo={todoList.filterDoneTodo}
                     switchFilterDoneTodo={todoList.switchFilterDoneTodo}
                 />
-                <div>
+                <div className={styles.todoList}>
                     {
                         todoList.todos.map(todo => (
-                            <TodoItem 
+                            <TodoItem
                                 key={todo.id}
                                 todo={todo}
                                 switchTodoDoneStatus={todoList.switchTodoDoneStatus}

@@ -54,3 +54,19 @@ $formElementHeight: 50px;
         font-size: $fontInputSize;
     }
 }
+
+.todoList {
+    height: 300px;
+    overflow: scroll;
+}
+
+.todoItem {
+    padding: 0px 24px;
+    margin: 4px 0px;
+    background: #c9c9c9;
+    color: #ffffff;
+    height:50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
