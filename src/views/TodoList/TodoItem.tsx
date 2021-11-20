@@ -1,4 +1,5 @@
 import React from 'react';
+import { useHistory } from 'react-router-dom';
 import { Todo } from '../../types/todoList';
 import styles from './index.module.scss';
 
@@ -9,6 +10,8 @@ type TodoProps = {
 }
 
 const TodoItem = (props: TodoProps) => {
+    const history = useHistory();
+
     return (
         <div className={styles.todoItem}>
             <span
@@ -29,6 +32,12 @@ const TodoItem = (props: TodoProps) => {
                     onClick={() => { props.deleteTodo(props.todo.id); }}
                 >
                     Delete
+                </button>
+                <button
+                    type="button"
+                    onClick={() => { history.push(`/todo/${props.todo.id}`); }}
+                >
+                    Details
                 </button>
             </span>
         </div>
